@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "app/dist/js",
+        "target": "ES6",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "sourceMap": true, // esse carinha irá fazer com que quando salvar os arquivos, ele irá gerar um novo arquivo ".js.map" na pasta (dist)
+        // sendo esse arquivo responsavel por nos permitir debugar arquivos TS no browser, já que normalmente só conseguimos debugar arquivos "JS", que é o que o navegador entende
+
+        // para que isso funcione, meu ambiente de desenvolvimento tem que compartilahr tanto os arquivos de desnevolvimento (src) quanto os arquivos final (dist) em ambiente de desenvolvimento. por isso tem a pasta "App" com o 'dist' e o 'src' juntos
+        //  ctrl + p, na aba do devTools, ele irá abrir uma barra de pesquisa e podemos pesquisar o arquivo que quiser para debugar
+        
+        // esse método irá dizer que eu quero que o compilador ts leia decorators em meu cpodigo em tempo de execução
+        "experimentalDecorators": true,
+    },
+    "include": ["app/src/**/*"]
+}
